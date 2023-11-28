@@ -21,5 +21,7 @@ Assets, or resources used
 
 # Created by: Elysium
 Jack Rosebrock - Programming
+
 Michael Dunn - Writing/File Management
+
 Alyssa Wittig - Art Design
