@@ -1,7 +1,27 @@
-[gd_scene format=3 uid="uid://32x1u6h28ofk"]
+[gd_scene load_steps=2 format=3 uid="uid://32x1u6h28ofk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5e0kr"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Jumping",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5e0kr")
+animation = &"Jumping"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
