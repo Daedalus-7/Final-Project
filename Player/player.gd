@@ -39,3 +39,7 @@ func set_animation(anim, off=Vector2.ZERO):
 
 func die():
 	queue_free()
+
+
+func _on_exit_body_entered(body):
+	get_tree().change_scene_to_file("res://UI/end_game.tscn")
