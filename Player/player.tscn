@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://StateMachine/Jumping.gd" id="7_yjoo7"]
 [ext_resource type="Script" path="res://StateMachine/Moving.gd" id="8_vepqi"]
 [ext_resource type="Script" path="res://StateMachine/Falling.gd" id="9_p7bxs"]
-[ext_resource type="AudioStream" uid="uid://dprxcndolrh4k" path="res://Assets/Cave_Ambience.wav" id="10_hgpny"]
+[ext_resource type="AudioStream" uid="uid://dh60ru11khcwa" path="res://Assets/Cave_Ambience.mp3" id="10_6166q"]
 [ext_resource type="Texture2D" uid="uid://cawqfsbosriq6" path="res://Assets/Light.jpg" id="11_gp6kh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ssrjl"]
@@ -169,7 +169,8 @@ limit_bottom = 2500
 position_smoothing_enabled = true
 
 [node name="Cave_Ambience" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_hgpny")
+position = Vector2(-1, 0)
+stream = ExtResource("10_6166q")
 autoplay = true
 max_distance = 1e+07
 
