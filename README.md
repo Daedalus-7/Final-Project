@@ -5,12 +5,15 @@ MSCH-C220 Game Jam, November 2023
 The player is inside a "cave" and must escape
 
 ## Game Play
-Objective
+Objective:
+
+Jump up and around the obstacles to escape the "cave"
+
+Controls:
+
 Move left and right using A & D,
 Jump using W,
 & Change Cameras with C
-
-Jump up and around the obstacles to escape the "cave"
 
 ## Impediments
 Problems communicating, audio file issues, and lighting issues
