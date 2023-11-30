@@ -13,10 +13,19 @@ var direction = 1
 
 func _ready():
 	up_direction = Vector2.UP
+	$Camera1.make_current()
 
 func _physics_process(_delta):
 	if direction < 0 and not $AnimatedSprite2D.flip_h: $AnimatedSprite2D.flip_h = true
 	if direction > 0 and $AnimatedSprite2D.flip_h: $AnimatedSprite2D.flip_h = false
+	
+	if Input.is_action_just_pressed("switch"):
+		if $Camera1.is_current():
+			$Camera2.make_current()
+			
+		
+		elif $Camera2.is_current():
+			$Camera1.make_current()
 
 func set_direction(d):
 	direction = d

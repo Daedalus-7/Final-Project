@@ -152,5 +152,15 @@ script = ExtResource("7_yjoo7")
 [node name="Falling" type="Node" parent="StateMachine"]
 script = ExtResource("9_p7bxs")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera1" type="Camera2D" parent="."]
 limit_left = 0
+limit_top = 0
+limit_bottom = 2500
+position_smoothing_enabled = true
+
+[node name="Camera2" type="Camera2D" parent="."]
+zoom = Vector2(0.4, 0.4)
+limit_left = 0
+limit_top = 0
+limit_bottom = 2500
+position_smoothing_enabled = true
