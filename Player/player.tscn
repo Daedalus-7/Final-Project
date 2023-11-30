@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://32x1u6h28ofk"]
+[gd_scene load_steps=26 format=3 uid="uid://32x1u6h28ofk"]
 
 [ext_resource type="Texture2D" uid="uid://dg8u0liyd558x" path="res://Assets/Great Beyond/Idle Sprit.png" id="1_0m8lc"]
 [ext_resource type="Script" path="res://Player/player.gd" id="1_pcusn"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://StateMachine/Jumping.gd" id="7_yjoo7"]
 [ext_resource type="Script" path="res://StateMachine/Moving.gd" id="8_vepqi"]
 [ext_resource type="Script" path="res://StateMachine/Falling.gd" id="9_p7bxs"]
+[ext_resource type="AudioStream" uid="uid://dprxcndolrh4k" path="res://Assets/Cave_Ambience.wav" id="10_hgpny"]
+[ext_resource type="Texture2D" uid="uid://cawqfsbosriq6" path="res://Assets/Light.jpg" id="11_gp6kh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ssrjl"]
 atlas = ExtResource("2_n3vr1")
@@ -127,6 +129,7 @@ size = Vector2(105, 183)
 script = ExtResource("1_pcusn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.443137, 0.443137, 0.443137, 1)
 position = Vector2(158, 149)
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_5e0kr")
@@ -164,3 +167,15 @@ limit_left = 0
 limit_top = 0
 limit_bottom = 2500
 position_smoothing_enabled = true
+
+[node name="Cave_Ambience" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_hgpny")
+autoplay = true
+max_distance = 1e+07
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(125, 182)
+energy = 2.0
+shadow_enabled = true
+texture = ExtResource("11_gp6kh")
+texture_scale = 4.0
